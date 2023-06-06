@@ -1,5 +1,6 @@
 pydantic
 langchain
 pytest
-dotenv
+python-dotenv
 openai
+typer[all]
