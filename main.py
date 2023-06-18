@@ -1,6 +1,7 @@
-from models.model import Terminal
+from models.terminal import Terminal
 from dotenv import load_dotenv
+import os
+from models.commentor import comment_code
 
-if __name__ == "__main__":
-    load_dotenv()
-    Terminal().run()
+load_dotenv()
+comment_code()

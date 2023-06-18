@@ -1,13 +1,12 @@
 from pydantic import BaseModel
 from utilities.utilities import read_file
-from agents.commentor import generate_comment
 import typer
 from rich import print
 from rich.progress import Progress, SpinnerColumn, TextColumn
 import time # Can remove only used for fake delay
 
-
 class Terminal(BaseModel):
+    """Terminal class for handling all terminal commands"""
 
     @staticmethod
     def run():
@@ -42,14 +41,13 @@ class Terminal(BaseModel):
                 transient=True,
             ) as progress:
                 progress.add_task(description="[green]Generating Comments...[/green]", total=None)
-                generate_comment(file_text)
+
+
                 time.sleep(3)
 
             print("[magenta]Done![/magenta]")
 
         app()
-
-
 
 
 

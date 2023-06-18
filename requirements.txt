@@ -4,3 +4,4 @@ pytest
 python-dotenv
 openai
 typer[all]
+unstructured
